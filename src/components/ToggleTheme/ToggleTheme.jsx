@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/24/solid"
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
 import { useEffect } from "react"
 
 const ToggleTheme = () => {
@@ -11,9 +11,9 @@ const ToggleTheme = () => {
     const toggle = () => {
         pageClasses.toggle('dark')
     }
-    return <div className="hidden sm:block">
-        <MoonIcon className="h-8 text-gray-100 block cursor-pointer dark:hidden" onClick={toggle} />
-        <SunIcon className="h-8 text-gray-100 hidden cursor-pointer dark:block" onClick={toggle} />
+    return <div className="sm:block mx-1">
+        <MoonIcon className="size-6 text-gray-100 hidden cursor-pointer dark:block" onClick={toggle} />
+        <SunIcon className="size-6 text-gray-100 block cursor-pointer dark:hidden" onClick={toggle} />
     </div>
 }
 

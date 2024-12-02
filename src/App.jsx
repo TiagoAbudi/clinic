@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div className="h-screen">
       <NavBar />
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-5/6">
         <img
           alt="Your Company"
           src="src/imgs/logo.png"
