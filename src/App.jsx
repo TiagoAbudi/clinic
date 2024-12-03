@@ -1,3 +1,4 @@
+import DataHora from "./components/DataHora/DataHora"
 import NavBar from "./components/NavBar/NavBar"
 
 const App = () => {
@@ -5,11 +6,12 @@ const App = () => {
     <div className="h-screen">
       <NavBar />
       <div className="flex flex-col items-center justify-center h-5/6">
-        <img
+        {/* <img
           alt="Your Company"
           src="src/imgs/logo.png"
           className="h-20 w-auto"
-        />
+        /> */}
+        <DataHora />
       </div>
     </div>
   )
