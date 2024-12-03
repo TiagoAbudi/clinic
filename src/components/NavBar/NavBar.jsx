@@ -2,11 +2,13 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import ToggleTheme from '../ToggleTheme/ToggleTheme'
 
+const currentURL = window.location.href;
+
 const navigation = [
-  { name: 'Início', href: '#', current: true },
-  { name: 'Horarios', href: '#', current: false },
-  { name: 'Agenda', href: '#', current: false },
-  { name: 'Clientes', href: '#', current: false },
+  { name: 'Início', href: 'inicio', current: currentURL.includes("inicio") ? true : false},
+  { name: 'Horarios', href: 'horario', current: currentURL.includes("horario") ? true : false},
+  { name: 'Agenda', href: 'agenda', current: currentURL.includes("agenda") ? true : false},
+  { name: 'Clientes', href: 'clientes', current: currentURL.includes("clientes") ? true : false},
 ]
 
 function classNames(...classes) {
@@ -15,6 +17,7 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
+  
     <Disclosure as="nav" className="bg-primary-200 dark:bg-secondary-200">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
